@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="pro.nanosystems.sharedpefs.MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/countText"
+            android:layout_width="0dp"
+            android:layout_height="278dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/darker_gray"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="0"
+            android:textColor="@android:color/white"
+            android:textSize="112sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/blackBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/black"
+            android:onClick="setColorBlack"
+            android:text="Black"
+            android:textColor="@android:color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/countText" />
+
+        <Button
+            android:id="@+id/blueBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/holo_blue_dark"
+            android:onClick="setColorBlue"
+            android:text="Blue"
+            android:textColor="@android:color/white"
+            app:layout_constraintBaseline_toBaselineOf="@+id/blackBtn"
+            app:layout_constraintStart_toEndOf="@+id/blackBtn" />
+
+        <Button
+            android:id="@+id/redBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/holo_red_dark"
+            android:onClick="setColorRed"
+            android:text="Red"
+            android:textColor="@android:color/white"
+            app:layout_constraintBaseline_toBaselineOf="@+id/blueBtn"
+            app:layout_constraintStart_toEndOf="@+id/blueBtn" />
+
+        <Button
+            android:id="@+id/greenBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/holo_green_dark"
+            android:onClick="setColorGreen"
+            android:text="Green"
+            android:textColor="@android:color/white"
+            app:layout_constraintBaseline_toBaselineOf="@+id/redBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/redBtn" />
+
+        <Button
+            android:id="@+id/countBtn"
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="84dp"
+            android:layout_marginTop="8dp"
+            android:onClick="setCount"
+            android:text="Count"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/blackBtn" />
+
+        <Button
+            android:id="@+id/resetBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="24dp"
+            android:onClick="resetCount"
+            android:text="reset"
+            app:layout_constraintBaseline_toBaselineOf="@+id/countBtn"
+            app:layout_constraintStart_toEndOf="@+id/countBtn" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
+
